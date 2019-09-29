@@ -9,5 +9,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Test apt
-      run: apt install curl
+    - name: Setup Node.js for use with actions
+      uses: actions/setup-node@v1.1.0
+      with:
+        node-version: '8.9'
+    - name: Test around
+      run: ls
+    - run: echo $PWD
